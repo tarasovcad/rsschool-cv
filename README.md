@@ -1,1 +1,1 @@
-# rsschool-cv
+# https://tarasovcad.github.io/rsschool-cv/cv
