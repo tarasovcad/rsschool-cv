@@ -1,3 +1,624 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 body {
-  background-color: red;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Fonts
+@font-face {
+  font-family: Fragment Mono Medium;
+  src: url('./../fonts/URWGeometricMedium.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Fragment Mono SemiBold;
+  src: url('./../fonts/URWGeometricSemiBold.otf');
+}
+@font-face {
+  font-family: Fragment Mono Regular;
+  src: url('./../fonts/URWGeometricRegular.otf');
+}
+@font-face {
+  font-family: Fragment Mono Light;
+  src: url('./../fonts/URWGeometricLight.otf');
+}
+@font-face {
+  font-family: Fragment Mono Bold;
+  src: url('./../fonts/URWGeometricBold.otf');
+}
+
+body {
+  background-color: #0f0d12;
+  font-family: 'Fragment Mono Medium', monospace;
+  font-style: normal;
+  color: #fff;
+}
+
+/* .fragment-mono-regular-italic {
+  font-family: 'Fragment Mono', monospace;
+  font-weight: 400;
+  font-style: italic;
+} */
+
+.container {
+  max-width: 1510px;
+  margin: auto;
+}
+.nav__list {
+  margin-top: 92px;
+  list-style: none;
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+.link {
+  position: relative;
+}
+.link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #d8fb79;
+}
+
+.link::after {
+  width: 0;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.link:hover:after {
+  width: 100%;
+}
+.main {
+  margin-top: 64px;
+  width: 100%;
+}
+
+.first__row {
+  display: flex;
+  gap: 72px;
+}
+
+.about {
+  background-color: #1b191c;
+  color: white;
+  border-radius: 33px;
+  padding: 42px 42px 14px 42px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.about__name {
+  font-family: Fragment Mono Bold;
+  font-size: 115px;
+  letter-spacing: -3%;
+  color: #fff;
+  white-space: nowrap;
+}
+.about__pic {
+  margin-top: 52px;
+  margin-bottom: 46px;
+  border-radius: 56px;
+  width: 462px;
+  height: 111px;
+}
+
+.about__text {
+  font-family: Fragment Mono Regular;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.about__flex {
+  display: flex;
+  justify-content: space-between;
+  width: 675px;
+  margin-bottom: 30px;
+}
+
+.about__flex_text {
+  font-family: Fragment Mono SemiBold;
+  font-size: 50px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.arrow-button {
+  font-family: Fragment Mono Regular;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 100px;
+  align-items: center;
+  padding: 8px 25px;
+  background: #d8fb79;
+  font-size: 27px;
+  letter-spacing: -0.05em;
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+  height: 51px;
+}
+
+.arrow {
+  transition: 0.4s;
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-image: url('./../img/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-button:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
+  color: black;
+}
+
+.arrow-button:hover > .arrow {
+  transform: rotate(45deg);
+}
+
+.contacts {
+  margin-top: 44px;
+  background-color: #1b191c;
+  border-radius: 37px;
+  padding: 32px 43px 32px 43px;
+}
+
+.contacts_1-images {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 11px;
+}
+
+.bold-font {
+  font-family: Fragment Mono Bold;
+}
+
+.contacts__svg {
+  width: 27px;
+  height: 27px;
+  border-radius: 100px;
+  background: #d8fb79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__title {
+  font-family: Fragment Mono Light;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__link {
+  position: relative;
+}
+.contacts__link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #d8fb79;
+}
+
+.contacts__link::after {
+  width: 0;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contacts__link:hover:after {
+  width: 100%;
+}
+
+.second__row {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.second__row-first {
+  background: #1b191c;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+  margin-right: 52px;
+  min-width: 709px;
+}
+
+.projects__title {
+  font-family: Fragment Mono SemiBold;
+  font-size: 51px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.project__container {
+  margin-top: 15px;
+  display: flex;
+  gap: 36px;
+}
+
+.project__img {
+  border-radius: 127px;
+  width: 159px;
+  height: 159px;
+}
+
+.project__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project__title {
+  font-family: Fragment Mono SemiBold;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.project__description {
+  font-family: Fragment Mono Regular;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #cecece;
+  margin-bottom: 15px;
+}
+
+.project-arrow-button {
+  font-family: Fragment Mono Regular;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 100px;
+  align-items: center;
+  background: #d8fb79;
+  font-size: 27px;
+  letter-spacing: -0.05em;
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 8px 25px;
+  width: 281px;
+  height: 51px;
+}
+
+.project-arrow-button:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
+  color: black;
+}
+
+.project-arrow-button:hover > .arrow {
+  transform: rotate(45deg);
+}
+.mb {
+  margin-top: 37px;
+}
+
+.code {
+  margin-top: 140px;
+}
+
+.code__text {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: Fragment Mono Regular;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #edece2;
+}
+
+.code-purple {
+  color: #9177f2;
+}
+
+.code-green {
+  color: #44e3c5;
+}
+
+.code-yellow {
+  color: #ffd700;
+}
+
+.code-orange {
+  color: #ffbf74;
+}
+.code-pink {
+  color: #d494f2;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.code__body {
+  margin-left: 20px;
+}
+
+.second__row-second {
+  background: #1b191c;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-end;
+  text-align: end;
+  width: 100%;
+}
+
+.skills-bar {
+  margin-bottom: 70px;
+}
+
+.skills-bar__item {
+  margin-top: 20px;
+}
+
+.skills-bar__item-title {
+  font-family: Fragment Mono SemiBold;
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.skills-bar__item-info {
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.skills-bar__item-info-percent {
+  font-family: Fragment Mono Regular;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.skills-bar__item-bar {
+  max-width: 389px;
+  height: 16px;
+  background-color: #4f4f4f;
+  width: 100%;
+  border-radius: 17px;
+  display: flex;
+  justify-content: flex-end;
+}
+.skills-bar__item-progress {
+  border-radius: 17px;
+  height: 100%;
+  background-color: #d8fb79; /* White text color */
+}
+
+.second__row-contacts {
+  display: flex;
+  gap: 95px;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+.second__row-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  background-color: #d8fb79;
+  transition: 0.4s;
+}
+.second__row-circle:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
+}
+
+.footer__container {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-year__text {
+  font-family: Fragment Mono Regular;
+  font-size: 48px;
+  letter-spacing: -0.02em;
+}
+
+.footer-github {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-github__text {
+  font-family: Fragment Mono Regular;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.footer-github__text::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+}
+
+.footer-github__text::after {
+  width: 0;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer-github__text:hover:after {
+  width: 100%;
 }
