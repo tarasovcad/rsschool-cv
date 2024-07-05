@@ -138,27 +138,29 @@ html {
   scroll-behavior: smooth;
 }
 
-// Fonts
+/* Fonts */
 @font-face {
-  font-family: Fragment Mono Medium;
+  font-family: "Fragment Mono Medium";
   src: url('./../fonts/URWGeometricMedium.otf');
-  font-weight: 400;
 }
 
 @font-face {
-  font-family: Fragment Mono SemiBold;
+  font-family: "Fragment Mono SemiBold";
   src: url('./../fonts/URWGeometricSemiBold.otf');
 }
+
 @font-face {
-  font-family: Fragment Mono Regular;
+  font-family: "Fragment Mono Regular";
   src: url('./../fonts/URWGeometricRegular.otf');
 }
+
 @font-face {
-  font-family: Fragment Mono Light;
+  font-family: "Fragment Mono Light";
   src: url('./../fonts/URWGeometricLight.otf');
 }
+
 @font-face {
-  font-family: Fragment Mono Bold;
+  font-family: "Fragment Mono Bold";
   src: url('./../fonts/URWGeometricBold.otf');
 }
 
@@ -237,7 +239,7 @@ body {
 .about__name {
   font-family: Fragment Mono Bold;
   font-size: 115px;
-  letter-spacing: -3%;
+  letter-spacing: -0.03em;
   color: #fff;
   white-space: nowrap;
 }
@@ -508,7 +510,6 @@ body {
   border-radius: 35px;
   display: flex;
   flex-direction: column;
-  //align-items: flex-end;
   text-align: end;
   width: 100%;
 }
