@@ -1,14 +1,163 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 body {
-  background-color: #0f0d12;
-  font-family: 'Fragment Mono', monospace;
-  font-weight: 400;
-  font-style: normal;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-main {
-  max-width: 1473px;
-  background-color: red;
-  margin: auto;
+// Fonts
+@font-face {
+  font-family: Fragment Mono Medium;
+  src: url('./../fonts/URWGeometricMedium.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Fragment Mono SemiBold;
+  src: url('./../fonts/URWGeometricSemiBold.otf');
+}
+@font-face {
+  font-family: Fragment Mono Regular;
+  src: url('./../fonts/URWGeometricRegular.otf');
+}
+@font-face {
+  font-family: Fragment Mono Light;
+  src: url('./../fonts/URWGeometricLight.otf');
+}
+@font-face {
+  font-family: Fragment Mono Bold;
+  src: url('./../fonts/URWGeometricBold.otf');
+}
+
+body {
+  background-color: #0f0d12;
+  font-family: 'Fragment Mono Medium', monospace;
+  font-style: normal;
 }
 
 /* .fragment-mono-regular-italic {
@@ -17,10 +166,144 @@ main {
   font-style: italic;
 } */
 
+.container {
+  max-width: 1510px;
+  margin: auto;
+}
 .nav__list {
+  margin-top: 92px;
   list-style: none;
   display: flex;
   gap: 45px;
-  margin: auto;
-  font-size: 40px;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-decoration: none;
+}
+.link {
+  position: relative;
+}
+.link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #d8fb79;
+}
+
+.link::after {
+  width: 0;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.link:hover:after {
+  width: 100%;
+}
+.main {
+  margin-top: 64px;
+  width: 100%;
+}
+
+.first__row {
+  display: flex;
+  gap: 72px;
+}
+
+.about {
+  background-color: #1b191c;
+  color: white;
+  border-radius: 33px;
+  padding: 42px 42px 14px 42px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.about__name {
+  font-family: Fragment Mono Bold;
+  font-size: 115px;
+  letter-spacing: -3%;
+  color: #fff;
+  white-space: nowrap;
+}
+.about__pic {
+  margin-top: 52px;
+  margin-bottom: 46px;
+  border-radius: 56px;
+  width: 462px;
+  height: 111px;
+}
+
+.about__text {
+  font-family: Fragment Mono Regular;
+  font-size: 25px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.about__flex {
+  display: flex;
+  justify-content: space-between;
+  width: 675px;
+  margin-bottom: 30px;
+}
+
+.about__flex_text {
+  font-family: Fragment Mono SemiBold;
+  font-size: 50px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.arrow-button {
+  font-family: Fragment Mono Regular;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  border-radius: 100px;
+  align-items: center;
+  padding: 8px 25px;
+  background: #d8fb79;
+  font-size: 27px;
+  letter-spacing: -0.05em;
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+  height: 51px;
+}
+
+.arrow {
+  transition: 0.4s;
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-image: url('./../img/arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-button:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
+  color: black;
+}
+
+.arrow-button:hover > .arrow {
+  transform: rotate(45deg);
 }

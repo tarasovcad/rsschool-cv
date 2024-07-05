@@ -4,26 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.cdnfonts.com/css/urw-geometric" rel="stylesheet" />
+
     <title>Document</title>
   </head>
   <body>
-    <main class="main">
-      <div class="conatiner">
-        <div class="nav">
-          <ul class="nav__list">
-            <li>About me</li>
-            <li>Contacts</li>
-            <li>Skills</li>
-            <li>Languages</li>
-          </ul>
+    <div class="container">
+      <div class="nav">
+        <ul class="nav__list">
+          <li><a class="link" href="#">About me</a></li>
+          <li><a class="link" href="#">Contacts</a></li>
+          <li><a class="link" href="#">Skills</a></li>
+          <li><a class="link" href="#">Languages</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="first__row">
+          <div class="about">
+            <h1 class="about__name">Maksym Tarasov</h1>
+            <img
+              class="about__pic"
+              src="./img//background/about.png"
+              alt=""
+              width="462px"
+              height="111px"
+            />
+            <div class="about__flex">
+              <h2 class="about__flex_text">About me.</h2>
+              <button class="arrow-button">
+                full-stack developer
+                <span class="arrow"></span>
+              </button>
+            </div>
+            <p class="about__text">
+              Starting at the age of 12, I became interested in programming and to this day I
+              continue to develop and progress. For me, programming is a real hobby that brings a
+              lot of pleasure. My dream is to create my own outsourcing company.
+            </p>
+          </div>
+          <div class="photo">
+            <img src="./img/photo.png" alt="" width="574px" height="586px" />
+          </div>
         </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>
