@@ -265,7 +265,7 @@ body {
 .arrow-button {
   font-family: Fragment Mono Regular;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 10px;
   border-radius: 100px;
   align-items: center;
@@ -348,9 +348,6 @@ body {
 }
 
 .contacts__link {
-}
-
-.contacts__link {
   position: relative;
 }
 .contacts__link::after {
@@ -372,4 +369,123 @@ body {
 }
 .contacts__link:hover:after {
   width: 100%;
+}
+
+.second__row {
+  margin-top: 44px;
+}
+
+.second__row-conatiner {
+  background: #1b191c;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+}
+
+.projects__title {
+  font-family: Fragment Mono SemiBold;
+  font-size: 51px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.project__container {
+  margin-top: 15px;
+  display: flex;
+  gap: 36px;
+}
+
+.project__img {
+  border-radius: 127px;
+  width: 159px;
+  height: 159px;
+}
+
+.project__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.project__title {
+  font-family: Fragment Mono Medium;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.project__description {
+  font-family: Fragment Mono Light;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #cecece;
+  margin-bottom: 15px;
+}
+
+.project-arrow-button {
+  font-family: Fragment Mono Regular;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 100px;
+  align-items: center;
+  background: #d8fb79;
+  font-size: 27px;
+  letter-spacing: -0.05em;
+  color: #363636;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 8px 25px;
+  width: 281px;
+  height: 51px;
+}
+
+.project-arrow-button:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
+  color: black;
+}
+
+.project-arrow-button:hover > .arrow {
+  transform: rotate(45deg);
+}
+.mb {
+  margin-top: 37px;
+}
+
+.code {
+  margin-top: 122px;
+}
+
+.code__text {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: Fragment Mono Regular;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  color: #edece2;
+}
+
+.code-purple {
+  color: #9177f2;
+}
+
+.code-green {
+  color: #44e3c5;
+}
+
+.code-yellow {
+  color: #ffd700;
+}
+
+.code-orange {
+  color: #ffbf74;
+}
+.code-pink {
+  color: #d494f2;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.code__body {
+  margin-left: 20px;
 }

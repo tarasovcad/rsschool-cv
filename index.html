@@ -19,7 +19,7 @@
         </ul>
       </div>
       <div class="main">
-        <div class="first__row">
+        <section class="first__row">
           <div class="about">
             <h1 class="about__name">Maksym Tarasov</h1>
             <img
@@ -45,8 +45,8 @@
           <div class="photo">
             <img src="./img/photo.png" alt="" width="574px" height="586px" />
           </div>
-        </div>
-        <div class="contacts">
+        </section>
+        <section class="contacts">
           <div class="contacts-container">
             <div class="contacts-container-1">
               <div class="contacts_1-images">
@@ -78,7 +78,90 @@
               <h2 class="contacts__title"><span class="bold-font">Country:</span> Canada</h2>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="second__row">
+          <div class="second__row-conatiner">
+            <div class="projects">
+              <h2 class="projects__title">Projects.</h2>
+              <div class="project__container">
+                <div class="project__img">
+                  <img src="./img/project/1.png" alt="" width="159px" height="159px" />
+                </div>
+                <div class="project__info">
+                  <h3 class="project__title">Desire | Furniture Store</h3>
+                  <p class="project__description">HTML5/SASS/JS/GULP</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/tarasovcad/projects/tree/main/Desire"
+                  >
+                    <button class="project-arrow-button">
+                      Check
+                      <span class="arrow"></span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <div class="project__container mb">
+                <div class="project__img">
+                  <img src="./img/project/2.png" alt="" width="159px" height="159px" />
+                </div>
+                <div class="project__info">
+                  <h3 class="project__title">Recidiviz</h3>
+                  <p class="project__description">HTML5/CSS/JS/GULP</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/tarasovcad/projects/tree/main/Recidiviz"
+                  >
+                    <button class="project-arrow-button">
+                      Check
+                      <span class="arrow"></span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="code">
+              <h2 class="projects__title">Code example.</h2>
+              <code class="code__text"
+                ><span class="code-purple">import</span> mongoose
+                <span class="code-purple">from</span>
+                <span class="code-green">'mongoose'</span>;<br />
+                <span class="code-purple">import</span>
+                <span class="code-yellow">{</span>
+                User
+                <span class="code-yellow">}</span>
+                <span class="code-purple">from</span>
+                <span class="code-green">'../../models/User'</span>; <br />
+                <span></span> <br />
+                <span class="code-purple">export async function</span>
+                <span class="code-orange">POST</span> <span class="code-yellow">(</span
+                ><span class="italic">req</span><span class="code-yellow">)</span>
+                <span class="code-yellow">{</span> <br />
+                <div class="code__body">
+                  <span class="code-purple">const</span> body
+                  <span class="code-purple"> = await </span> req
+                  <span class="code-orange">.json</span><span class="code-pink">( )</span>; <br />
+                  mongoose. <span class="code-orange">connect</span>
+                  <span class="code-pink">(</span>process.<span class="code-pink">env</span>.<span
+                    class="code-pink"
+                    >MONGO_URL</span
+                  ><span class="code-pink">)</span>;
+                  <br />
+                  <span class="code-purple">const</span> createdUser
+                  <span class="code-purple"> = await </span> User.<span class="code-orange"
+                    >create</span
+                  >
+                  <span class="code-pink">(</span>body<span class="code-pink">)</span>; <br />
+                  <span class="code-purple">return</span> Response<span class="code-orange"
+                    >.json</span
+                  ><span class="code-pink">(</span>createdUser<span class="code-pink">)</span>;
+                </div>
+
+                <span class="code-yellow">}</span>
+              </code>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </body>
