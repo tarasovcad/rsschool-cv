@@ -2,39 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.cdnfonts.com/css/urw-geometric" rel="stylesheet" />
-
-    <title>Document</title>
+    <title>My portfolio</title>
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon-32x32.png" />
   </head>
   <body>
     <div class="container">
       <header class="nav">
         <ul class="nav__list">
-          <li><a class="link" href="#">About me</a></li>
-          <li><a class="link" href="#">Contacts</a></li>
-          <li><a class="link" href="#">Skills</a></li>
-          <li><a class="link" href="#">Languages</a></li>
+          <li><a class="link" href="#about">About me</a></li>
+          <li><a class="link" href="#contacts">Contacts</a></li>
+          <li><a class="link" href="#skills">Skills</a></li>
+          <li><a class="link" href="#languages">Languages</a></li>
         </ul>
       </header>
       <main class="main">
         <section class="first__row">
-          <div class="about">
+          <div class="about" id="about">
             <h1 class="about__name">Maksym Tarasov</h1>
             <img
               class="about__pic"
-              src="./img//background/about.png"
+              src="./img/background/about.png"
               alt=""
               width="462px"
               height="111px"
             />
             <div class="about__flex">
               <h2 class="about__flex_text">About me.</h2>
-              <button class="arrow-button">
-                full-stack developer
-                <span class="arrow"></span>
-              </button>
+              <a href="https://github.com/tarasovcad"
+                ><button class="arrow-button">
+                  full-stack developer
+                  <span class="arrow"></span></button
+              ></a>
             </div>
             <p class="about__text">
               Starting at the age of 12, I became interested in programming and to this day I
@@ -43,15 +44,15 @@
             </p>
           </div>
           <div class="photo">
-            <img src="./img/photo.png" alt="" width="574px" height="586px" />
+            <img src="./img/photo.png" alt="Avatar" width="574px" height="586px" />
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts-container">
             <div class="contacts-container-1">
               <div class="contacts_1-images">
-                <img src="./img/background/email.png" alt="" />
-                <div class="contacts__svg"><img src="./img/svg/email.svg" alt="" /></div>
+                <img src="./img/background/email.png" alt="background image" />
+                <div class="contacts__svg"><img src="./img/svg/email.svg" alt="Email" /></div>
               </div>
               <address class="contacts__title">
                 <a class="contacts__link" href="mailto:tarasovcad@gmail.com"
@@ -61,8 +62,8 @@
             </div>
             <div class="contacts-container-1">
               <div class="contacts_1-images">
-                <img src="./img/background/phone.png" alt="" />
-                <div class="contacts__svg"><img src="./img/svg/phone.svg" alt="" /></div>
+                <img src="./img/background/phone.png" alt="background image" />
+                <div class="contacts__svg"><img src="./img/svg/phone.svg" alt="Phone" /></div>
               </div>
               <a class="contacts__link" href="tel:5551234567"
                 ><h2 class="contacts__title">
@@ -72,8 +73,8 @@
             </div>
             <div class="contacts-container-1">
               <div class="contacts_1-images">
-                <img src="./img/background/country.png" alt="" />
-                <div class="contacts__svg"><img src="./img/svg/home.svg" alt="" /></div>
+                <img src="./img/background/country.png" alt="background image" />
+                <div class="contacts__svg"><img src="./img/svg/home.svg" alt="Country" /></div>
               </div>
               <h2 class="contacts__title"><span class="bold-font">Country:</span> Canada</h2>
             </div>
@@ -85,7 +86,12 @@
               <h2 class="projects__title">Projects.</h2>
               <div class="project__container">
                 <div class="project__img">
-                  <img src="./img/project/1.png" alt="" width="159px" height="159px" />
+                  <img
+                    src="./img/project/1.png"
+                    alt="Project picture"
+                    width="159px"
+                    height="159px"
+                  />
                 </div>
                 <div class="project__info">
                   <h3 class="project__title">Desire | Furniture Store</h3>
@@ -103,7 +109,12 @@
               </div>
               <div class="project__container mb">
                 <div class="project__img">
-                  <img src="./img/project/2.png" alt="" width="159px" height="159px" />
+                  <img
+                    src="./img/project/2.png"
+                    alt="Project picture"
+                    width="159px"
+                    height="159px"
+                  />
                 </div>
                 <div class="project__info">
                   <h3 class="project__title">Recidiviz</h3>
@@ -163,7 +174,7 @@
           </div>
           <div class="second__row-second">
             <h2 class="projects__title">My skills.</h2>
-            <div class="skills-bar">
+            <div class="skills-bar" id="skills">
               <div class="skills-bar__item">
                 <div class="skills-bar__item-title">HTML</div>
                 <div class="skills-bar__item-info">
@@ -217,7 +228,7 @@
               </div>
             </div>
             <h2 class="projects__title">Languages.</h2>
-            <div class="skills-bar">
+            <div class="skills-bar" id="languages">
               <div class="skills-bar__item">
                 <div class="skills-bar__item-title">RUSSIAN</div>
                 <div class="skills-bar__item-info">
@@ -251,15 +262,15 @@
               </div>
             </div>
             <div class="second__row-contacts">
-              <a href=""
+              <a href="https://www.instagram.com/s_maximka56/"
                 ><div class="second__row-circle">
                   <img src="./img/svg/instagram.svg" alt="instagram logo" /></div
               ></a>
-              <a href=""
+              <a href="https://github.com/tarasovcad"
                 ><div class="second__row-circle">
                   <img src="./img/svg/git.svg" alt="github logo" /></div
               ></a>
-              <a href=""
+              <a href="https://discordapp.com/users/heho4ka/"
                 ><div class="second__row-circle">
                   <img src="./img/svg/discord.svg" alt="discord logo" /></div
               ></a>
@@ -267,7 +278,24 @@
           </div>
         </section>
       </main>
-      <footer></footer>
+      <footer>
+        <div class="footer__container">
+          <div class="footer-github">
+            <img src="./img/svg/footer-git.svg" alt="Github logo" />
+            <a href="https://github.com/tarasovcad"
+              ><h2 class="footer-github__text">Visit my GitHub</h2></a
+            >
+          </div>
+          <div class="footer-year">
+            <h2 class="footer-year__text">© 2024</h2>
+          </div>
+          <div class="footer-logo">
+            <a href="https://rs.school/courses/javascript-preschool-ru"
+              ><img src="./img/rslogo.png" alt="rs logo" width="228px" height="81px"
+            /></a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
