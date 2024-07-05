@@ -385,6 +385,8 @@ body {
   background: #1b191c;
   padding: 20px 30px 20px 30px;
   border-radius: 35px;
+  margin-right: 52px;
+  min-width: 709px;
 }
 
 .projects__title {
@@ -457,7 +459,7 @@ body {
 }
 
 .code {
-  margin-top: 122px;
+  margin-top: 140px;
 }
 
 .code__text {
@@ -507,13 +509,17 @@ body {
   width: 100%;
 }
 
+.skills-bar {
+  margin-bottom: 70px;
+}
+
 .skills-bar__item {
   margin-top: 20px;
 }
 
 .skills-bar__item-title {
   font-family: Fragment Mono SemiBold;
-  font-size: 36px;
+  font-size: 32px;
   letter-spacing: -0.02em;
 }
 
@@ -525,7 +531,7 @@ body {
 }
 .skills-bar__item-info-percent {
   font-family: Fragment Mono Regular;
-  font-size: 30px;
+  font-size: 28px;
   letter-spacing: -0.02em;
 }
 
@@ -542,4 +548,24 @@ body {
   border-radius: 17px;
   height: 100%;
   background-color: #d8fb79; /* White text color */
+}
+
+.second__row-contacts {
+  display: flex;
+  gap: 95px;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+.second__row-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  background-color: #d8fb79;
+  transition: 0.4s;
+}
+.second__row-circle:hover {
+  box-shadow: 7px 5px 56px -10px #c3d900;
 }
