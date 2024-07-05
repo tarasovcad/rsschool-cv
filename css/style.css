@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -373,9 +377,11 @@ body {
 
 .second__row {
   margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.second__row-conatiner {
+.second__row-first {
   background: #1b191c;
   padding: 20px 30px 20px 30px;
   border-radius: 35px;
@@ -488,4 +494,52 @@ body {
 
 .code__body {
   margin-left: 20px;
+}
+
+.second__row-second {
+  background: #1b191c;
+  padding: 20px 30px 20px 30px;
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-end;
+  text-align: end;
+  width: 100%;
+}
+
+.skills-bar__item {
+  margin-top: 20px;
+}
+
+.skills-bar__item-title {
+  font-family: Fragment Mono SemiBold;
+  font-size: 36px;
+  letter-spacing: -0.02em;
+}
+
+.skills-bar__item-info {
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.skills-bar__item-info-percent {
+  font-family: Fragment Mono Regular;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+
+.skills-bar__item-bar {
+  max-width: 389px;
+  height: 16px;
+  background-color: #4f4f4f;
+  width: 100%;
+  border-radius: 17px;
+  display: flex;
+  justify-content: flex-end;
+}
+.skills-bar__item-progress {
+  border-radius: 17px;
+  height: 100%;
+  background-color: #d8fb79; /* White text color */
 }
