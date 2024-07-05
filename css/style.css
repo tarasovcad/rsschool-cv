@@ -158,6 +158,7 @@ body {
   background-color: #0f0d12;
   font-family: 'Fragment Mono Medium', monospace;
   font-style: normal;
+  color: #fff;
 }
 
 /* .fragment-mono-regular-italic {
@@ -306,4 +307,69 @@ body {
 
 .arrow-button:hover > .arrow {
   transform: rotate(45deg);
+}
+
+.contacts {
+  margin-top: 44px;
+  background-color: #1b191c;
+  border-radius: 37px;
+  padding: 32px 43px 32px 43px;
+}
+
+.contacts_1-images {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 11px;
+}
+
+.bold-font {
+  font-family: Fragment Mono Bold;
+}
+
+.contacts__svg {
+  width: 27px;
+  height: 27px;
+  border-radius: 100px;
+  background: #d8fb79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts__title {
+  font-family: Fragment Mono Light;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__link {
+}
+
+.contacts__link {
+  position: relative;
+}
+.contacts__link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -5px;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #d8fb79;
+}
+
+.contacts__link::after {
+  width: 0;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contacts__link:hover:after {
+  width: 100%;
 }
